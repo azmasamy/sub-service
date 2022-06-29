@@ -34,31 +34,39 @@ Also don't forget to add the $OWNER or any other near account you have access to
 `admins: Array<string> = ['hamzatest.testnet'];`
 
 ### Scripts 
-`./scripts/0-check-account.sh`
-Run this to delete the old account if exitsis, and create a new one with the specified CONTRACT environment variable. 
- 
-`./scripts/1-build-deploy.sh`
+- `./scripts/0-check-account.sh`
+Run this to delete the old account if exitsis, and create a new one with the specified CONTRACT environment variable.
+
+
+- `./scripts/1-build-deploy.sh`
 Run this to build, and deploy the contract.
- 
-`./scripts/2-create-service.sh`
+
+
+- `./scripts/2-create-service.sh`
 Run this to create a service. don't forget to edit the parameters and add a future date for the `expiryDate` parameter. Also edit the `--accountId` wich will call the contract method (Must be in the admins hard-coded list).
 
-`./scripts/3-list-services.sh`
+
+- `./scripts/3-list-services.sh`
 Run this to view all services in the state and also view all available (unexpired) services.
 
-`./scripts/4-subscribe.sh`
+
+- `./scripts/4-subscribe.sh`
 Run this to subscribe a user to the contract. don't forget to change the `--accountId` with the near account you want to use to subscribe to the contract.
 
-`./scripts/5-list-subs.sh`
+
+- `./scripts/5-list-subs.sh`
 Run this to view all subscribers in the state and also view all subscribers who have valid (unexpired) subscribtions.
 
-`./scripts/6-redeem.sh`
+
+- `./scripts/6-redeem.sh`
 Run this to redeem an available (unexpired) service. don't forget to change the `--accountId` to the near account you used to subscribe to the contract.
 
-`./scripts/3-list-services.sh`
+
+- `./scripts/3-list-services.sh`
 Run this again to view changes to the service `redeemCount`.
 
-`./scripts/5-list-subs.sh`
+
+- `./scripts/5-list-subs.sh`
 Run this again to view changes to the account `redeemedServices`.
 
 
