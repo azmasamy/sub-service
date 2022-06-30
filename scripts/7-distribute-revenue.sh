@@ -4,6 +4,6 @@ set -e
 
 echo --------------------------------------------
 echo
-echo "Redeeming a sercice..."
+echo "Distributing Revenue..."
 echo
-near call  "$CONTRACT" redeem '{"serviceId":"HTAHIR.TESTNET/1656599414893"}' --accountId=hamzatest.testnet
+near call  "$CONTRACT" distributeRevenue --accountId=hamzatest.testnet

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-unset $CONTRACT
-unset $OWNER
+# unset $CONTRACT
+# unset $OWNER
 
-export CONTRACT=sub-service.hamzatest.testnet
-export OWNER=hamzatest.testnet
+# export CONTRACT=sub-service.hamzatest.testnet
+# export OWNER=hamzatest.testnet
 
 # [ -z "$CONTRACT" ] && echo "Missing \$CONTRACT environment variable"
 # [ -z "$OWNER" ] && echo "Missing \$OWNER environment variable"

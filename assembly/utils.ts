@@ -1,4 +1,5 @@
-import { u128, Context, ContractPromise } from "near-sdk-as";
+import { u128 } from "near-sdk-as";
+import { Constants } from "./constants";
 
 /**
  * == TYPES ====================================================================
@@ -41,8 +42,7 @@ export type Timestamp = u64;
  */
 
 export const ONE_NEAR = u128.from("1000000000000000000000000");
-export const XCC_GAS: Gas = 20_000_000_000_000;
-export const MIN_ACCOUNT_BALANCE: u128 = u128.mul(ONE_NEAR, u128.from(3));
+export const BASE_TO_CONVERT = 1000000.0;
 
 /**
  * == FUNCTIONS ================================================================
@@ -76,17 +76,6 @@ export function toYocto(amount: number): u128 {
   return u128.mul(ONE_NEAR, u128.from(amount))
 }
 
-/**
- * Function to assert that the contract has called itself
- */
-export function assert_self(): void {
-  const caller = Context.predecessor
-  const self = Context.contractName
-  assert(caller == self, "Only this contract may call itself");
-}
-
-export function assert_single_promise_success(): void {
-  const x = ContractPromise.getResults()
-  assert(x.length == 1, "Expected exactly one promise result")
-  assert(x[0].succeeded, "Expected PromiseStatus to be successful")
+export function percentageToYocto(amount: u128): u128 {
+  return u128.mul(Constants.TOTAL_SERVICES_REVINUE, amount)
 }

@@ -8,8 +8,3 @@ echo
 near view  "$CONTRACT" getServices
 echo
 echo
-echo --------------------------------------------
-echo
-echo "Getting available services..."
-echo
-near view  "$CONTRACT" getActiveServices

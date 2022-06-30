@@ -6,4 +6,4 @@ echo --------------------------------------------
 echo
 echo "Subscribing..."
 echo
-near call  "$CONTRACT" subscribe --accountId="htahir.testnet" --amount=10
+near call  "$CONTRACT" subscribe --accountId="hamzatest.testnet" --amount=10

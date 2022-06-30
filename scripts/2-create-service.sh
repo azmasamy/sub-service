@@ -6,4 +6,4 @@ echo --------------------------------------------
 echo
 echo "Creating a service..."
 echo
-near call  "$CONTRACT" addService '{"discription":"Free Coffee", "provider":"Gloria Jeans", "expiryDate":"2022-06-29T23:50:50.100"}' --accountId="hamzatest.testnet"
+near call  "$CONTRACT" addService '{"provider":"htahir.testnet", "title":"1 hour with hamza", "description":"Amaizing offer!"}' --accountId="hamzatest.testnet"
