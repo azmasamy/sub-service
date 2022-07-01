@@ -10,6 +10,7 @@ export class Service {
   description: String;
   redeemCount: number;
   registerationDate: u64;
+  expiryDate: u64;
 
   constructor(
     id: string,
@@ -18,6 +19,7 @@ export class Service {
     description: String,
     redeemCount: number,
     registerationDate: u64,
+    expiryDate: u64
   ) {
     this.id = id;
     this.provider = provider;
@@ -25,6 +27,7 @@ export class Service {
     this.description = description;
     this.redeemCount = redeemCount;
     this.registerationDate = registerationDate;
+    this.expiryDate = expiryDate;
   }
 }
 

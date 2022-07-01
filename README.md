@@ -5,11 +5,11 @@
 This project is meant for educational purposes only. It was developed as a part of the [NEAR](https://near.org/) certififed developer program. It is not production-ready and it misses a lot of test, validations and business logic. The project is built using  [NEAR](https://near.org/) 's AssemblyScript SDK and the deployment scripts uses  [NEAR-CLI](https://docs.near.org/docs/tools/near-cli) 
 
 ## About
-The project simulates a subscribtion service where you can subscribe monthly and get amaizing offeres from international companies for a fee much smaller than the fees of all the offered services combined.
+The project simulates a subscribtion service where you can subscribe monthly and get amaizing offeres from international companies for a fee much smaller than the fees of all the offered services combined. the revenue is distributed at the end of the period by ratio of service redemtion (the more the service is redeemed the more percentage it takes  from the subscribtion fees). 20% of the subscribtion fees go to the app beneficiary.
 
 ### The Admins
 The admins (a hard-coded list of near accounts that can add services) create services that can be redeemed by a user in the span of a specific period that the admin specify when creating the service.
-- `addService` required parameters are ("discription", "provider", and "expiryDate").
+- `addService` required parameters are ("provider", "title", and "description").
 
 
 ### The Users
@@ -67,6 +67,12 @@ Run this again to view changes to the account `redeemedServices`.
 
 - `./scripts/7-distribute-revenue.sh`
 Run this to distribute the revenue among the services depending on how many each one was redeemed. don't forget to change the `--accountId` to the near account you used to subscribe to the contract.
+
+- `./scripts/8-test.sh`
+Run this to test service creation and user subscribtion. don't forget to change the `--accountIds` and the arguments approprietly.
+
+- `./scripts/9-test.sh`
+Run this to test service redemtion and revenue distribution. don't forget to change the `--accountIds` and `id` for the redeem funtion argument
 
 
 

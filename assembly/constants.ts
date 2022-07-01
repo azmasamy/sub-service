@@ -10,7 +10,7 @@ export class Constants {
     static ALREADY_REDEEMED:string = 'You have already redeemed this service';
     static SUB_FEES:Money = u128.from(toYocto(10));
     static CONTRACT_PROFIT:Money = u128.from(toYocto(2));
-    static TOTAL_SERVICES_REVINUE = u128.sub(this.SUB_FEES, this.CONTRACT_PROFIT);
-    static NOT_ENOUGH_CREDIT:string = "Attached deposit must cover the subscription fees (" + Constants.SUB_FEES.toString() + " NEAR)";
+    static TOTAL_SERVICES_REVINUE:Money = u128.sub(Constants.SUB_FEES, Constants.CONTRACT_PROFIT);
+    static NOT_ENOUGH_CREDIT:string = "Attached deposit must cover the subscription fees (" + Constants.SUB_FEES.toString() + " YOCTO)";
     static REDEEMS_KEY:string = 'totalRedeems';
   }
