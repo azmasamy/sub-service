@@ -185,11 +185,12 @@ export class SubService {
 
   @mutateState()
   distributeRevenue(): number {
+    
     assert(this.admins.includes(context.sender), Constants.ACCESS_DENIED);
     let totalRedeems = storage.getPrimitive(Constants.REDEEMS_KEY, 0);
     for (let i = 0; i < this.services_ids.length; i++) {
       let service = this.services.getSome(this.services_ids[i]);
-      let percentage = service.redeemCount / totalRedeems
+      let percentage = service.redeemCount / totalRedeems;
       if (percentage > 0) {
         ContractPromiseBatch.create(service.provider).transfer(this._percentageToYocto(percentage));
         service.redeemCount = 0;

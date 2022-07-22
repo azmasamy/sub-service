@@ -11,19 +11,10 @@ import { Constants } from "./constants";
 export type AccountId = string;
 
 /**
- * Gas is u64
- */
-export type Gas = u64;
-
-/**
  * Amounts, Balances, and Money in NEAR is are u128.
  */
 
-export type Amount = u128;
-
-export type Balance = Amount;
-
-export type Money = Amount;
+export type Money = u128;
 
 /**
  * Timestamp in NEAR is a number.
